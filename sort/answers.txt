@@ -1,0 +1,10 @@
+sort1 uses: Bubble sort
+
+How do you know?: final comparison is between sort1 and sort3 now that sort 2 has been concluded to be merge sort. Bubble sort has omega notation of n, which is lower than selection sort. Sort1 runs faster in sorted data sets, therefore sort 1 must be bubble sort
+sort2 uses: Merge Sort
+
+How do you know?: Considerably faster at sorting random numbers, which is to be expected considered the lower big O notation of merge sort.
+
+sort3 uses: Selection Sort
+
+How do you know?: By process of abduction

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+
+    <form action="/buy" method="post">
+        <!--Copying same layout as in login-->
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Stock Symbol" type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="Number of Shares" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Buy</button>
+    </form>
+    {% if purchase %}
+        <p class="green">You have succesfully bought {{ stock_info["nb_shares"] }} shares of {{ stock_info["name"] }} at {{  stock_info["price"] | usd }} for a total of {{ stock_info["cash_needed"] | usd }}. You now have {{ user_cash | usd }} left.</p>
+    {% endif %}
+
+{% endblock %}
+

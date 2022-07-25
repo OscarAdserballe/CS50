@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<div class="justify-content-center">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Stock</th>
+                <th>Number of Shares</th>
+                <th>Price Bought at</th>
+                <th>Current Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for stock in stocks %}
+            <tr>
+                <td>{{ stock["stock_symbol"] }}</td>
+                <td>{{ stock["amount_of_shares"] }}</td>
+                <td>{{ stock["price_bought_at"] | usd }}</td>
+                <td>{{ stock["current_price"] | usd }}</td>
+                <td>{{ stock["total"] | usd }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        <tfooter>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Cash: {{ cash | usd }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Asset Value: {{ assets | usd }}</td>
+            </tr>
+        </tfooter>
+    </table>
+</div>
+{% endblock %}

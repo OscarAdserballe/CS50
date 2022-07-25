@@ -1,0 +1,35 @@
+* {
+    font-family: Comic Sans MS;
+}
+
+#navbar {
+    list-style-type: none;
+    background-color: #e6fcec;
+}
+#navbar li {
+    margin-right: 10%;
+}
+a:link {
+    text-decoration: none;
+    color: green;
+}
+
+a:active {
+    color: red;
+}
+
+.center {
+    text-align: center;
+}
+ol {
+    list-style-type: none;
+}
+
+.done {
+    color: red;
+    text-decoration: line-through;
+    text-decoration-color: black;
+}
+h1 {
+    font-size: 20vw;
+}

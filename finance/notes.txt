@@ -1,0 +1,6 @@
+TABLE users containing {
+    id primary key auto increment
+    username TEXT
+    hash TEXT
+    cash default 10000.00
+}
